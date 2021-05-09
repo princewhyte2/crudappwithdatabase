@@ -11,7 +11,8 @@ var dataRouter = require("./routes/dataRouter");
 const mongoose = require("mongoose");
 const Data = require("./models/data");
 
-const url = "mongodb://localhost:27017/data";
+const url =
+  "mongodb+srv://Princewhyte2:pC4W1qBuMaHbUOhx@cluster0.8jxlg.mongodb.net/data?retryWrites=true&w=majority";
 const connect = mongoose.connect(url);
 
 connect.then(
