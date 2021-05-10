@@ -3,6 +3,7 @@ var express = require("express");
 var path = require("path");
 var cookieParser = require("cookie-parser");
 var logger = require("morgan");
+require("dotenv").config();
 
 var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
@@ -12,8 +13,7 @@ var dataRouter = require("./routes/dataRouter");
 const mongoose = require("mongoose");
 const Data = require("./models/data");
 
-const url =
-  "mongodb+srv://Princewhyte2:5rBgygL0TSScDRsO@cluster0.8jxlg.mongodb.net/data?retryWrites=true&w=majority";
+const url = `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@cluster0.8jxlg.mongodb.net/data?retryWrites=true&w=majority`;
 
 // const client = new MongoClient(url, {
 //   useNewUrlParser: true,
